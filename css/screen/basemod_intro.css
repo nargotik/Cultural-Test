@@ -1,0 +1,143 @@
+/**
+* "Yet Another Multicolumn Layout" - (X)HTML/CSS framework
+* (en) stylesheet for screen layout
+* (de) Stylesheet fr das Bildschirm-Layout
+*
+* @creator       YAML Builder V1.2 (http://builder.yaml.de)
+* @file          basemod.css
+* @-yaml-minver  3.1
+
+-------------------------------------------------------------------------
+(en) Marginal areas & page background
+(de) Randbereiche & Seitenhintergrund*/
+/*+clearfix {*/
+#header #menu_topo:after
+{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	font-size: 0;
+}
+#header #menu_topo
+{
+	display: inline-block;
+}
+#header #menu_topo
+{
+/*\*/
+	display: block;
+/**/
+	_height: 1px;
+}
+/*+}*/
+BODY
+{
+	padding: 0px 0 10px;
+	background-position: top right;
+	background-repeat: repeat-x;
+	background-image: url(images/bg_intro.png);
+	background-color: #FFFFFF;
+}
+/*Layout Alignment*/
+.page_margins
+{
+	margin: 0 auto;
+}
+/*Layout Properties*/
+.page_margins
+{
+	width: 980px;
+}
+.page
+{
+	padding: 0px 10px 10px;
+}
+#header
+{
+	padding: 0px 2em 1em 20px;
+	color: #000;
+	background: url(images/bg_header_intro.png) no-repeat 50% 90%;
+	height: 605px;
+}
+/*[clearfix]*/#header #menu_topo
+{
+	/*+placement:float-right -50px 35px;*/
+	float: right;
+	position: relative;
+	left: -160px;
+	top: 25px;
+	color: #FFFFFF;
+	text-align: right;
+	width: 300px;
+	font-size: 1.3em;
+}
+#header #menu_topo A, #header #menu_topo A:visited
+{
+	color: #E1E7EA;
+	font-size: medium;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 1px 0 0;
+}
+#header #menu_topo A:hover, #header #menu_topo A:active
+{
+	color: #C6C6C6;
+	text-decoration: overline;
+}
+#header #pesquisa
+{
+	/*+placement:shift 82px 148px;*/
+	position: relative;
+	left: 260px;
+	top: 407px;
+	width: 500px;
+	height: 0px;
+}
+#header #pesquisa #search_inp
+{
+	background-color: #F1F2F2;
+	border: 0px solid #000000;
+	height: 18px;
+	width: 392px;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #0381A9;
+}
+.button_ok {
+ vertical-align:middle;
+    height: 54px;
+	width: 50px;
+    border: none;
+    background: url(images/ok.png) no-repeat top left;
+
+
+}
+.button_ok:hover {
+    height: 54px;
+	width: 50px;
+    border: none;
+    background: url(images/ok_hover.png) no-repeat top left;
+
+
+}
+#container
+{
+	background: url(images/bg_header2_intro.png) no-repeat center top;
+	margin: 0 auto;
+	min-width: 980px;
+	max-width: 1400px;
+	width: auto;
+}
+#topnav
+{
+	position: static;
+	color: #AAA;
+	background: transparent;
+}
+#main
+{
+	margin: 10px 0;
+	background: transparent url(images/barra.png) repeat-x;
+}

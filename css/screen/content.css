@@ -1,0 +1,459 @@
+/**
+* "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+*
+* (en) Uniform design of standard content elements
+*
+* @copyright       Copyright 2005-2007, Dirk Jesse
+* @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+*                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+* @link            http://www.yaml.de
+* @package         yaml
+* @version         3.0.2
+* @revision        $Revision: 107 $
+* @lastmodified    $Date: 2007-08-01 18:27:14 +0200 (Mi, 01 Aug 2007) $
+* @appdef yaml
+
+*
+* Fonts
+* (en) font-family and font-size selection for headings and standard text elements
+*
+* @section content-fonts
+
+(en) reset font size for all elements to standard (16 Pixel)
+(de) Alle Schriftgren auf Standardgre (16 Pixel) zurcksetzen*/
+HTML *
+{
+	font-size: 100.01%;
+}
+/*(en) base layout gets standard font size 12px*/
+BODY
+{
+	font-family: "Trebuchet MS", Verdana, Helvetica, Arial, sans-serif;
+	font-size: 75%;
+	color: #444;
+}
+H1, H2, H3, H4, H5, H6
+{
+	font-family: "Trebuchet MS", times, serif;
+	font-weight: bold;
+	color: #666;
+	margin: 0 0 0.25em;
+}
+H1
+{
+	font-size: 200%;
+}
+/*24px*/
+H2
+{
+	font-size: 120%;
+	color: #BC051B;
+}
+/*24px*/
+H3
+{
+	font-size: 150%;
+}
+/*18px*/
+H4
+{
+	font-size: 133.33%;
+}
+/*16px*/
+H5
+{
+	font-size: 116.67%;
+}
+/*14px*/
+H6
+{
+	font-size: 116.67%;
+	font-style: italic;
+}
+/*14px*/
+#header H1
+{
+	font-size: 2.5em;
+	letter-spacing: -2px;
+	line-height: 65%;
+	color: #000;
+}
+#header SPAN
+{
+	color: #999;
+}
+P
+{
+	line-height: 1.5em;
+	margin: 0 0 1em;
+}
+/*### Lists | Listen  ####*/
+UL, OL, DL
+{
+	line-height: 1.5em;
+	margin: 0 0 1em 1em;
+}
+LI
+{
+	margin-left: 1.5em;
+	line-height: 1.5em;
+}
+DT
+{
+	font-weight: bold;
+}
+DD
+{
+	margin: 0 0 1em 2em;
+}
+/*### text formatting | Textauszeichnung ###*/
+CITE, BLOCKQUOTE
+{
+	font-style: italic;
+}
+BLOCKQUOTE
+{
+	margin: 0 0 1em 1.5em;
+}
+STRONG, B
+{
+	font-weight: bold;
+}
+EM, I
+{
+	font-style: italic;
+}
+PRE, CODE
+{
+	font-family: monospace;
+	font-size: 1.1em;
+}
+ACRONYM, ABBR
+{
+	letter-spacing: 0.07em;
+	border-bottom: 0.1em dashed #C00;
+	cursor: help;
+}
+/**
+* Generic Content Classes
+* (en) standard classes for positioning and highlighting
+* (de) Standardklassen zur Positionierung und Hervorhebung
+*
+* @section content-generic-classes
+*/
+.note
+{
+	background: #DFD;
+	padding: 1em;
+	border-bottom: 1px dotted #BDB;
+	border-bottom: 1px dotted #DBB;
+}
+.important
+{
+	background: #FFD;
+	padding: 1em;
+	border-bottom: 1px dotted #DDB;
+	border-bottom: 1px dotted #DBB;
+}
+.warning
+{
+	background: #FDD;
+	padding: 1em;
+	border-bottom: 1px dotted #DBB;
+	border-bottom: 1px dotted #DBB;
+}
+.float_left
+{
+	float: left;
+	display: inline;
+	margin-right: 1em;
+	margin-bottom: 0.15em;
+}
+.float_right
+{
+	float: right;
+	display: inline;
+	margin-left: 1em;
+	margin-bottom: 0.15em;
+}
+.center
+{
+	text-align: center;
+	margin: 0.5em auto;
+}
+/**
+* External Links
+*
+* (en) Formatting of hyperlinks
+* (de) Gestaltung von Hyperlinks
+*
+*/
+A
+{
+	color: #4D87C7;
+	text-decoration: none;
+}
+A:focus, A:hover, A:active
+{
+	color: #182E7A;
+	text-decoration: underline;
+}
+#header A
+{
+	color: #999;
+	font-weight: normal;
+	background: transparent;
+	text-decoration: none;
+}
+#header A:focus, #header A:hover, #header A:active
+{
+	text-decoration: underline;
+	background-color: transparent;
+}
+#footer A
+{
+	color: #999;
+	background: transparent;
+	font-weight: bold;
+}
+#footer A:focus, #footer A:hover, #footer A:active
+{
+	color: #4D87C7;
+	background-color: transparent;
+	text-decoration: underline;
+}
+/**
+* (en) Emphasizing external Hyperlinks via CSS
+* (de) Hervorhebung externer Hyperlinks mit CSS
+*
+* @section             content-external-links
+* @app-yaml-default    disabled
+
+
+#main a[href^="http://www.my-domain.com"],
+#main a[href^="https://www.my-domain.com"]
+{
+padding-left: 12px;
+background-image: url('your_image.gif');
+background-repeat: no-repeat;
+background-position: 0 0.45em;
+}
+
+*
+* Tables | Tabellen
+* (en) Generic classes for table-width and design definition
+* (de) Generische Klassen fr die Tabellenbreite und Gestaltungsvorschriften fr Tabellen
+*
+* @section content-tables
+*/
+/*TABLE
+{
+	width: auto;
+	border-collapse: collapse;
+	margin-bottom: 0.5em;
+}
+TABLE.grid
+{
+	width: auto;
+	border-collapse: collapse;
+	margin-bottom: 0.5em;
+	border: 1px solid #878787;
+}
+TABLE.full
+{
+	width: 100%;
+}
+TABLE.fixed
+{
+	table-layout: fixed;
+}
+TH, TD
+{
+	padding: 0.5em 0.5em 0.5em 0.54em;
+}
+THEAD TH
+{
+	background: #046;
+	color: #FFF;
+}
+TBODY TH
+{
+	background: #888;
+	color: #FFF;
+	font-weight: bold;
+	text-decoration: underline;
+}
+TBODY TH.sub
+{
+	background: #DDD;
+	color: #333;
+}*/
+table { width:auto; border-collapse:collapse; margin-bottom:0.5em; border-top:2px #888 solid; border-bottom:2px #888 solid; }
+table.none {
+	border-collapse:collapse; margin-bottom:0.5em; border-top:0px #888 solid; border-bottom:0px #888 solid;
+}
+table caption { font-variant:small-caps; }
+table.full { width:100%; }
+table.fixed { table-layout:fixed; }
+
+th,td { padding:0.5em; }
+thead th { color:#000; border-bottom:2px #800 solid; }
+tbody th { background:#e0e0e0; color:#333; }
+tbody th[scope="row"], tbody th.sub { background:#f0f0f0; }
+
+tbody th { border-bottom:1px solid #fff; text-align:left; }
+tbody td { border-bottom:1px solid #eee; }
+
+tbody th.none { border-bottom:0px solid #fff; text-align:left; }
+tbody td.none { border-bottom:0px solid #eee; }
+
+tbody tr:hover th[scope="row"],
+tbody tr:hover tbody th.sub { background:#f0e8e8; }
+tbody tr:hover td { background:#CEDCE3; }
+
+tbody tr:hover tbody th.sub { background:transparent; }
+tbody tr:hover td.none { background:transparent; }
+
+/**
+* Miscellaneous | Sonstiges
+*
+* @section content-misc
+*/
+HR
+{
+	color: #FFF;
+	background: transparent;
+	margin: 0 0 0.5em;
+	padding: 0 0 0.5em;
+	border: 0;
+	border-bottom: 1px solid #EEE;
+}
+
+/* --Uploadify -- */
+.uploadifyQueueItem {
+	font: 11px Verdana, Geneva, sans-serif;
+	border: 2px solid #E5E5E5;
+	background-color: #F5F5F5;
+	margin-top: 5px;
+	padding: 10px;
+	width: 350px;
+}
+.uploadifyError {
+	border: 2px solid #FBCBBC !important;
+	background-color: #FDE5DD !important;
+}
+.uploadifyQueueItem .cancel {
+	float: right;
+}
+.uploadifyProgress {
+	background-color: #FFFFFF;
+	border-top: 1px solid #808080;
+	border-left: 1px solid #808080;
+	border-right: 1px solid #C5C5C5;
+	border-bottom: 1px solid #C5C5C5;
+	margin-top: 10px;
+	width: 100%;
+}
+.uploadifyProgressBar {
+	background-color: #0099FF;
+	width: 1px;
+	height: 3px;
+}
+.fileQueue .uploadifyQueueItem {
+	font: 11px Verdana, Geneva, sans-serif;
+	border: none;
+	border-bottom: 1px solid #E5E5E5;
+	background-color: #FFFFFF;
+	padding: 5%;
+	width: 80%;
+	height: 12px;
+}
+.fileQueue .uploadifyError {
+	background-color: #FDE5DD !important;
+}
+.fileQueue .uploadifyQueueItem .cancel {
+	float: right;
+}
+
+
+
+
+.groupWrapper
+{
+	width: 100%;
+	float: left;
+	margin-right: 1%;
+	min-height: 400px;
+}
+.serializer
+{
+	clear: both;
+}
+.groupItem
+{
+	margin-bottom: 5px;
+	border: 1px solid #444444;
+
+}
+.groupItem .itemHeader
+{
+	line-height: 28px;
+	background-color: #FFFFFF;
+	border-bottom: 2px solid #444444;
+	color: #000;
+	padding: 0 10px;
+	cursor: move;
+	font-weight: bold;
+	font-size: 14px;
+	height: 28px;
+	position: relative;
+}
+.groupItem .itemHeader a
+{
+	color: #000;
+
+}
+
+.groupItem .itemHeader .links
+{
+	position: absolute;
+	right: 10px;
+	top: 4px;
+	font-weight: normal;
+	font-size: 11px;
+	text-decoration: none;
+}
+.sortHelper
+{
+	border: 3px dashed red;
+	width: auto !important;
+}
+.groupWrapper p
+{
+	height: 1px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+.itemContent {
+	width:100%;
+}
+.itemContent ul {
+	list-style-type: none;
+	margin: 0px;
+	width:100%;
+	
+} 
+.itemContent ul li  {
+	list-style-type: none;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	margin-left:2%;
+	width:98%;
+}
+
+.itemContent ul li .delete_child  {
+	position: relative;
+	left: 556px;
+	top: 4px;
+}
