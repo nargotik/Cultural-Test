@@ -87,7 +87,7 @@ if($module == 'blogs_index') {
 	if($smarty->isCached('blog.tpl',$cache_id)) {
 		$smarty->display('blog.tpl',$cache_id);exit;
 	}
-	$sql = "SELECT posts.*,slugs.* FROM posts,slugs WHERE posts.user='$id' AND posts.id=slugs.id AND slugs.lg='$lg' AND slugs.module='post' ORDER BY date_created ASC";
+	$sql = "SELECT posts.*,slugs.* FROM posts,slugs WHERE posts.user='$id' AND posts.id=slugs.id AND slugs.lg='$lg' AND slugs.module='post' ORDER BY date_created DESC";
 	$result = mysql_query($sql);
 	while ($row = mysql_fetch_assoc($result)) {
 		$r++;
